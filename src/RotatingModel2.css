@@ -1,0 +1,39 @@
+.rotating-model-container2 {
+  position: absolute;
+  top: 170%;
+  left: 25%;
+  width: 700px;
+  height: 700px;
+  transform: translateX(-50%);
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🖥 Large desktops */
+@media (min-width: 1200px) {
+  .rotating-model-container2 {
+    width: 700px;
+    height: 700px;
+    top: 170%;
+    left: 20%;
+  }
+}
+
+/* 💻 Tablets */
+@media (max-width: 1024px) {
+  .rotating-model-container2 {
+    width: 550px;
+    height: 550px;
+    top: 200%;
+    left: 30%;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .rotating-model-container2 {
+    width: 250px;
+    height: 250px;
+    top: 180vh;
+  }
+}

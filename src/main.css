@@ -1,0 +1,72 @@
+/* ---------- ROTATING MODELS WRAPPER ---------- */
+.rotating-models-wrapper {
+  position: relative; /* allows moving with margin or top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0; /* default spacing */
+  z-index: 20; /* ensures it's above the scene */
+}
+
+/* Title styling */
+.rotating-models-title {
+  font-family: "Arenq", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: 25; /* above models */
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Models group */
+.rotating-models-group {
+  display: flex;
+  gap: 3rem; /* spacing between models */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+/* Large desktop (1080px+) */
+@media (min-width: 1081px) {
+  .rotating-models-wrapper {
+    top: 0vh;
+    margin-top: 5rem; /* push down if needed */
+  }
+  .rotating-models-title {
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+  }
+}
+
+/* Tablet adjustments (up to 1024px) */
+@media (max-width: 1024px) {
+  .rotating-models-wrapper {
+    top: 20vh;
+    margin-top: 3rem;
+  }
+  .rotating-models-title {
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+  }
+  .rotating-models-group {
+    gap: 2rem;
+  }
+}
+
+/* Mobile adjustments (up to 600px) */
+@media (max-width: 600px) {
+  .rotating-models-wrapper {
+    top: -180vh;
+    margin-top: 2rem;
+  }
+  .rotating-models-title {
+    top: 50vh;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin-bottom: 1rem;
+  }
+  .rotating-models-group {
+    gap: 1rem;
+    flex-direction: column; /* stack models vertically */
+  }
+}
